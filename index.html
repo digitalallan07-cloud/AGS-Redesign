@@ -9,10 +9,64 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/antigravity.css" />
   <!-- Favicon from existing site -->
   <link rel="icon" type="image/x-icon" href="https://americanglobalsecurity.com/wp-content/uploads/2022/11/cropped-ags-favicon-32x32.png" />
 </head>
-<body>
+<body class="intro-active">
+
+  <!-- ========== ANTIGRAVITY INTRO OVERLAY ========== -->
+  <div class="ag-overlay" id="agOverlay">
+    <canvas id="agCanvas"></canvas>
+    <div class="ag-content" id="agContent">
+      <div class="ag-logo-wrap" id="agLogoWrap">
+        <div class="ag-letter" data-letter="A" id="agLetterA">A</div>
+        <div class="ag-letter" data-letter="G" id="agLetterG">G</div>
+        <div class="ag-letter" data-letter="S" id="agLetterS">S</div>
+      </div>
+      <div class="ag-tagline" id="agTagline">
+        <span class="ag-typed" id="agTyped"></span>
+        <span class="ag-cursor">|</span>
+      </div>
+      <div class="ag-subtitle" id="agSubtitle">CALIFORNIA'S MOST TRUSTED SECURITY</div>
+      <div class="ag-cta-group" id="agCtaGroup">
+        <div class="ag-badge-item" id="agBadge1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed & Bonded
+        </div>
+        <div class="ag-badge-item" id="agBadge2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          24/7 Protection
+        </div>
+        <div class="ag-badge-item" id="agBadge3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          500+ Clients
+        </div>
+      </div>
+      <button class="ag-enter-btn" id="agEnterBtn">
+        <span>Enter Site</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <div class="ag-hint" id="agHint">drag the letters &bull; defy gravity</div>
+    </div>
+    <div class="ag-floating-elements" id="agFloating">
+      <div class="ag-float-icon ag-float-shield" id="agFloat1">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="ag-float-icon ag-float-star" id="agFloat2">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div class="ag-float-icon ag-float-lock" id="agFloat3">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <div class="ag-float-icon ag-float-eye" id="agFloat4">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div class="ag-float-icon ag-float-radio" id="agFloat5">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+    </div>
+  </div>
 
   <!-- ========== ANNOUNCEMENT BAR ========== -->
   <div class="announcement-bar">
@@ -611,5 +665,6 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/antigravity.js"></script>
 </body>
 </html>
